@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="style.css">
+    <title>Video Comment & Like</title>
+</head>
+  <body>
+    <div class="container">
+        <div class="poster">
+            <img src="image/first.png" alt="poster1">
+            <img src="image/dua.png" alt="poster2">
+        </div>
+        <div class="bismi">
+            <img src="image/bismi.png" alt="">
+        </div>
+        <div class="salam">
+            <img src="image/salam.png" alt="">
+        </div>
+
+        <div class="parent">
+        <p>ZAHARI BIN ADAM</p>
+        <p >&</p>
+        <p >ZABIDAH BTE ZAINAL</p>
+        </div>
+
+        <div class="jemputan">
+        <p class=>DENGAN SEGALA HORMATNYA MENJEMPUT DATO’</p>
+        <p class=>DATIN / TUAN / PUAN / ENCIK / CIK DAN SEISI</p> 
+        <p class=>KELUARGA KE MAJLIS PERKAHWINAN PUTERI KAMI</p>
+        <p class=>BERSAMA PASANGANNYA</p>
+        </div>
+  
+        <div class="pasangan">
+          <p> AHMAD AIDIL BIN ZAHARI</p>
+          <p >&</p>
+          <p >NURUL AINA BINTI SUHAIMI</p>
+        </div>
+  
+        <div class="gambarinfo">
+          <img class="jam" src="image/calendar.png" alt="masa">
+          <p class="normal"> SABTU, 12 NOVEMBER 2021 </p>
+          <img class="jam" src="image/clock.png" alt="masa">
+          <p class="normal"> 11 PAGI - 2 PETANG </p>
+          <img class="jam" src="image/map.png" alt="masa">
+          <p class="normal"> DEWAN MAKAN </p>
+        </div>
+
+        <div class="aturcara">
+            <img src="image/deco.png" alt="deco">
+            <h1>Aturcara Majlis</h1>
+            <img src="image/deco.png" alt="deco">
+            <div class="jemput">
+              Ketibaan Jemputan <span class="kanan">7:30 P.M.</span></p>
+            </div>
+            <p class="jemput">Ketibaan Pengantin <span class="kanan">8:00 P.M.</span></p>
+            <p class="jemput">Selawat & Bacaan Doa <span class="kanan">8:10 P.M.</span></p>
+            <p class="jemput">Jamuan Makan <span class="kanan">8:20 P.M.</span></p>
+            <p class="jemput">Sesi Memotong Kek <span class="kanan">9:00 P.M.</span></p>
+            <p class="jemput">Sesi Bergambar <span class="kanan">9:30 P.M.</span></p>
+            <p class="jemput">Majlis Bersurai <span class="kanan">10:00 P.M</span></p>
+          </div>
+
+          <div class="doa">
+            <img class="decodoa" src="image/deco.png" alt="deco">
+            <div class="jemputan">
+              <p>" Ya Allah, berkatilah majlis perkahwinan ini,</p>
+              <p>limpahkanlah baraqah dan rahmat kepada kedua</p> 
+              <p>mempelai ini, Kurniakanlah mereka zuriat yang</p>
+              <p>soleh dan solehah. Kekalkanlah jodoh mereka di</p>
+              <p>dunia dan di akhirat dan sempurnakanlah agama</p>
+              <p>mereka dengan berkat ikatan ini "</p>
+              <p>Semoga kehadiran dan doa Tuan/Puan</p>
+              <p>dapat menyerikan lagi majlis dan diberkati</p>
+              <p>Allah SWT</p>
+              <p>Terima Kasih</p>
+            </div>
+            <img src="image/deco.png" alt="deco">
+          </div>
+    
+
+
+          <div class="countdown">
+            <img src="image/deco.png" alt="">
+            <p>Wedding Countdown</p>
+          </div>
+          <div class="launchtime">
+            <div>
+              <p id="days">00</p>
+              <span>Days</span>
+            </div>
+            <div>
+              <p id="hours">00</p>
+              <span>Hours</span>
+            </div>
+            <div>
+              <p id="minutes">00</p>
+              <span>Minutes</span>
+            </div>
+            <div>
+              <p id="seconds">00</p>
+              <span>Seconds</span>
+            </div>
+          </div>
+          <img class="decocount" src="image/deco.png" alt="">
+    
+          <script>
+            var CountDownDate = new Date("August 31,2023 00:00:00").getTime();
+            var x = setInterval(function(){
+              var now = new Date().getTime();
+              var distance = CountDownDate - now;
+    
+              var days = Math.floor(distance / (1000*60*60*24));
+              var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+              var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+              var seconds = Math.floor((distance % (1000*60)) / 1000);
+    
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+    
+              
+            },1000);
+          </script>
+
+
+
+        <div class="ucapan">
+          <p>Ucapan Untuk Pengantin</p>
+        </div>
+        <div class="form__info">
+          <input type="text" id="user" placeholder="Nama Anda">
+          <textarea id="comment" placeholder="Ucapan"></textarea>
+          <button class="submit__btn">Submit</button>
+        </div>
+        <div class="comments__container" id="commentsContainer">
+          <!-- Comments will be added here dynamically -->
+        </div>
+
+ 
+
+      <div class="pagination">
+        <button id="prevBtn">Previous</button>
+        <ul id="pageList" class="page-list"></ul>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+
+
+  
+  </body>
+<footer>
+  <div class="overlayhadirtakhadir"></div>
+  <div class="overlayhadir"></div>
+  <div class="overlaytakhadir"></div>
+  <div class="overlay2"></div>
+  <div class="overlay3"></div>
+  <div class="overlay4"></div>
+    <div class="gambarbawah">
+      <div class="rsvpbuka">
+          <img src="image/rsvp.png" alt="">
+          RSVP
+      </div>
+      <div class="calbuka">
+        <img src="image/calendar2.png" alt="">
+        Calendar
+      </div>
+      <div class="mapbuka">
+        <img src="image/map.png" alt="">
+        Location
+      </div>
+      <div class="fonbuka">
+        <img src="image/fonlama.png" alt="">
+        Contact
+      </div>
+    </div>
+    <div class="overlayhadirtakhadir"></div>
+    <div class="overlayhadir"></div>
+    <div class="overlaytakhadir"></div>
+    <div class="overlay2"></div>
+    <div class="overlay3"></div>
+    <div class="overlay4"></div>
+
+    <div class="modalmap">
+      <div class="mapatas">Location</div>
+        <div class="modalmapimg1">
+        <img  src="image/google.png" alt="">
+        <p>Use Google Maps Location</p>
+        </div>
+        <div class="modalmapimg2">
+        <img src="image/waze.png" alt="">
+        <p>Use Waze Location</p>
+        </div>
+        <button class="calbut1">simpan</button>
+        <button class="calbut2">simpan</button>
+    </div>
+
+    <div class="modalfon">
+      <div class="containermodal">
+        <h1>HUBUNGI</h1>
+        <p class="contact">AIDIL <span class="wskanan"><img src="image/wasap.png" alt=""></span><span class="callkanan"><img src="image/call.png" alt=""></span></p>
+        <p class="fon">0192557155</p>
+        <p class="contact">ZAHARI <span class="wskanan"><img src="image/wasap.png" alt=""></span><span class="callkanan"><img src="image/call.png" alt=""></span></p>
+        <p class="fon">0195447601</p>
+        <p class="contact">AINA <span class="wskanan"><img src="image/wasap.png" alt=""></span><span class="callkanan"><img src="image/call.png" alt=""></span></p>
+        <p class="fon">01133102537</p>
+      </div>
+     </div>
+
+    <div class="modalcal">
+      <div class="calendaratas">Calendar</div>
+        <div class="modalcalimg1">
+        <img  src="image/gcalendar.png" alt="">
+        <p>add to google calendar</p>
+        </div>
+        <div class="modalcalimg2">
+        <img src="image/apple.png" alt="">
+        <p>add to apple calendar</p>
+        </div>
+        <button class="calbut1">simpan</button>
+        <button class="calbut2">simpan</button>
+    </div>
+
+    <div class="modalcheck">
+      <form class="formhadir">
+      <div class="hadir">
+          <input type="checkbox" id="checker" name="hadir">
+          <label for="checker">
+            <img src="image/check.png" alt="hadir">
+          </label>
+          <p>Hadir</p>
+        
+      </div>
+    
+      <div class="takhadir">
+        <input type="checkbox" id="crosser" name="takhadir">
+        <label for="crosser">
+          <img src="image/cross.png" alt="takhadir">
+          <p>Tak hadir</p>
+        </label>
+      </div>
+   
+    </div>
+
+
+    <div class="modalrsvptakhadir">
+      <h1 id=""></h1>
+      <div class="rsvptitle1">
+        Tak Hadir
+      </div>
+      <div class="form__info">
+        <input type="text" id="users" name="users" placeholder="Nama Anda">
+        <textarea id="comments" placeholder="Sampaikan Ucapan"></textarea>
+        <button type="submit" class="submit__btns" id="subs">Submit</button>
+      </div>
+    </div>
+
+    <div class="modalrsvphadir">
+        <h1 id="msg"></h1>
+          <div class="rsvptitle">
+            Hadir
+          </div>
+          <div class="rsvptext"> Jumlah Kehadiran</div>
+          <div class="rsvpkehadiran">
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="1" name="orang1" >
+              <label for="1">1</label>
+            </div>
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="2" name="orang2">
+              <label for="2">2</label>
+            </div>
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="3" name="orang3">
+              <label for="3">3</label>
+            </div>
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="4" name="orang4">
+              <label for="4">4</label>
+            </div>
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="5" name="orang5">
+              <label for="5">5</label>
+            </div>
+            <div class="rsvpkehadiran">
+              <input type="checkbox" id="6" name="orang6">
+              <label for="6">6</label>
+            </div>
+          </div>
+          <input class="inputrsvp" id="nama" type="text" placeholder="Nama" name="namahadir">
+          <input class="inputrsvp" id="nombor" type="tel" placeholder="No. Telefon" name="phone">
+          <input type="submit" class="enter" id="sub">
+
+      </form>
+    </div>
+
+
+
+    <script src="main.js"></script>
+  </footer>
+</html>
